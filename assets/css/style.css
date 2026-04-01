@@ -289,6 +289,9 @@ header ul {
   .section-wrap section:nth-child(4) {
     display: inherit;
   }
+  .section-wrap section {
+    border-radius: 40px;
+  }
 }
 @media screen and (min-width: 1600px) {
   .section-wrap section:nth-child(5) {
