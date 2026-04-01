@@ -2,6 +2,7 @@
   --bg-section: #fef7e2;
   --btn-color: #ffdf7f;
   --txt-color: #732104;
+  --btn-navbar: 6em;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -10,17 +11,87 @@ body {
 }
 
 h5 {
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  font-size: 1.2em;
 }
+
+p {
+  line-height: 1.5em;
+}
+
+/* NAVBAR */
+
+header {
+  background-color: var(--bg-section);
+  padding: 1em;
+  border-radius: 100px;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#main-logo img {
+  width: 20%;
+}
+
+#main-logo,
+.sub-ul-list li {
+  border-radius: 100px;
+  margin: 0 1em 0.5em;
+  background-color: var(--btn-color);
+  padding: 20px;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1em;
+}
+
+.sub-ul-list {
+  flex-direction: row;
+  align-items: center;
+}
+.sub-ul-list li {
+  width: 100%;
+  flex-grow: 1;
+  margin-bottom: 1em;
+}
+
+#main-logo {
+  display: inherit;
+  text-transform: uppercase;
+  font-size: 2em;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+/* ARTICLE */
+.article-wrap {
+  background-color: var(--bg-section);
+  display: flex;
+  padding: 2em;
+  border-radius: 30px;
+  gap: 2em;
+  flex-direction: column-reverse;
+}
+
 /* CARD CSS */
 .card {
   width: 300px;
-  margin: 3em auto; /*da rimovere*/
   background-color: var(--bg-section);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 70px;
+  border-radius: 80px;
 }
 
 .card img {
@@ -30,13 +101,62 @@ h5 {
 }
 
 .card-text {
+  margin-top: 1em;
   display: inherit;
   justify-content: space-evenly;
+  align-items: center;
 }
+
 .card-text div {
   text-align: center;
 }
 
-.card-text p {
+.card-text > p {
+  font-size: 1.2em;
+}
+
+.card-text div p {
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+.btn-card {
+  background-color: var(--btn-color);
+  border: none;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.5em 2.5em;
+  border-radius: 20px;
+  align-self: center;
+  color: var(--txt-color);
+}
+
+@media screen and (min-width: 992px) {
+  /* ARTICLE */
+  .article-wrap {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav > ul > li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sub-ul-list li {
+    margin-bottom: 0em;
+  }
+
+  header ul li:first-child {
+    order: 1;
+  }
+  header ul li:last-child {
+    order: 2;
+  }
 }
