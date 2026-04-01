@@ -1,0 +1,42 @@
+:root {
+  --bg-section: #fef7e2;
+  --btn-color: #ffdf7f;
+  --txt-color: #732104;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--txt-color);
+  background-color: #732104;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+/* CARD CSS */
+.card {
+  width: 300px;
+  margin: 3em auto; /*da rimovere*/
+  background-color: var(--bg-section);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 70px;
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.card-text {
+  display: inherit;
+  justify-content: space-evenly;
+}
+.card-text div {
+  text-align: center;
+}
+
+.card-text p {
+  margin-top: 0;
+}
